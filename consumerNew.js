@@ -3,7 +3,7 @@
 var amqp = require('amqplib/callback_api');
 var exchange = 'movies';
 
-amqp.connect('amqps://b-b989224f-410e-4d33-b310-e9d2a0b1df9b.mq.us-east-1.amazonaws.com:5671', function(error0, connection) {
+amqp.connect('amqps://sharan316:sharan316316@b-b989224f-410e-4d33-b310-e9d2a0b1df9b.mq.us-east-1.amazonaws.com:5671', function(error0, connection) {
   if (error0) {
     throw error0;
   }
@@ -12,7 +12,7 @@ amqp.connect('amqps://b-b989224f-410e-4d33-b310-e9d2a0b1df9b.mq.us-east-1.amazon
       throw error1;
     }
 	
-	channel.assertExchange(exchange, "fanout", {durable: false});
+	channel.assertExchange(exchange, "fanout", {durable: true});
 		const price = Math.random()*100;
 		const msg = `Stock price of ABC is ${price}`;
 		channel.publish (exchange, '', Buffer.from(msg));

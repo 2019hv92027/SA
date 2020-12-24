@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+
 
 var amqp = require('amqplib/callback_api');
 var exchange = 'movies';
@@ -21,15 +21,15 @@ amqp.connect('amqps://sharan316:sharan316316@b-b989224f-410e-4d33-b310-e9d2a0b1d
 				console.log("Received", msg.content.toString());
 				
 			}, {noAck: true});
-			);
+			});
 		//console.log("Published Message", msg);
 		
     
     
   });
 
-  setTimeout(function() { 
-    connection.close(); 
-    process.exit(0); 
-  }, 500);
+//  setTimeout(function() { 
+//    connection.close(); 
+//    process.exit(0); 
+//  }, 500);
 });
