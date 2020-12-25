@@ -14,7 +14,7 @@ connection.connect();
 //var id = '1';
 let id = process.argv[2];
 
-let sql = `SELECT * FROM todos WHERE title=` + id ;
+let sql = `SELECT * FROM movies WHERE title=` + id ;
 
 connection.query(sql, (error, results, fields) => {
   if (error) {
