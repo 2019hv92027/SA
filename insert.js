@@ -8,13 +8,13 @@ var connection = mysql.createConnection({
 });
 connection.connect();
 
-var article = {
-  author: 'Abhishek',
-  title: 'test',
-  body: 'assignment'
+var movies = {
+  director: 'Prabhu Deva',
+  title: 'ABCD',
+  release_date: '2007-05-06'
 };
 
-var query = connection.query('insert into articles set ?', article, function (err, result) {
+var query = connection.query('insert into movies set ?', movies, function (err, result) {
   if (err) {
     console.error(err);
     return;
