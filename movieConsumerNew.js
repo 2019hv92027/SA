@@ -3,7 +3,7 @@
 import unirest from 'unirest';
 var amqp = require('amqplib/callback_api');
 
-amqp.connect('amqps://sharan316:sharan316316@http://192.168.1.4:15672', function(error0, connection) {
+amqp.connect('amqps://sharan316:sharan316316@b-44612873-26b4-4b16-988e-b4db0e96abba.mq.us-east-1.amazonaws.com:5671', function(error0, connection) {
     if (error0) {
         throw error0;
     }
@@ -12,7 +12,7 @@ amqp.connect('amqps://sharan316:sharan316316@http://192.168.1.4:15672', function
             throw error1;
         }
 
-        var queue = 'movies';
+        var queue = 'movietest';
 
         channel.assertQueue(queue, {
             durable: true
