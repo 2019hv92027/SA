@@ -54,9 +54,4 @@ amqp.connect('amqps://sharan316:sharan316316@b-44612873-26b4-4b16-988e-b4db0e96a
     
     
   });
-
-  setTimeout(function() { 
-    connection.close(); 
-    process.exit(0); 
-  }, 500);
 });
