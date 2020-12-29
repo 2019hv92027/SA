@@ -48,7 +48,7 @@ amqp.connect('amqps://sharan316:sharan316316@b-44612873-26b4-4b16-988e-b4db0e96a
 			//channel.publish (exchange, '', Buffer.from(msg));
 			//console.log("Published Message", msg);
 			
-		}, 1000);
+		}, 10000000);
 		
 		
     
