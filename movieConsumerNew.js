@@ -3,7 +3,7 @@
 import unirest from 'unirest';
 var amqp = require('amqplib/callback_api');
 
-amqp.connect('amqps://guest:guest@localhost:5671', function(error0, connection) {
+amqp.connect('amqps://sharan316:sharan316316@http://192.168.1.4:15672', function(error0, connection) {
     if (error0) {
         throw error0;
     }
